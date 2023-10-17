@@ -6,8 +6,8 @@ const Login = () => {
   const [password,setPassword]=useState();
   const navigate = useNavigate();
   const payload = {
-    email : 'email',
-    password : 'passsword'
+    email : email,
+    password : password,
   }
 
   const logInFunc = async () => {
@@ -27,13 +27,11 @@ const Login = () => {
   }
     
   }
-
-
   return (
     <>
     <div className='form'>
       <div className='loginbox'>
-    <form action="#">
+    <form>
     <h3>Log In</h3>
             <div class="input-boxes">
               <div class="input-box">
@@ -47,7 +45,7 @@ const Login = () => {
                 </label>
               </div>
               <div class="button input-box">
-                <input type="submit" className="submit_btn" onClick={logInFunc} value="Log In"/>
+                <button type="button" className="submit_btn" onClick={logInFunc} value="Log In"/>
               </div>
             </div>
 

@@ -59,7 +59,7 @@ const Sign_up = () => {
                 </label>
               </div>
               <div class="button input-box">
-                <input onClick={signUpFunc} type="submit" className="submit_btn" value="Sign up"/>
+                <button type='button' onClick={signUpFunc} className="submit_btn" value="Sign up">Sign Up</button>
               </div><br/>
               <h5>Already Have an Account! <Link to="/login" style={{textDecoration:'none'}}>LogIn Here</Link></h5>
             </div>
