@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 
 const Sign_up = () => {
   const [email,setEmail] = useState();
@@ -17,14 +17,10 @@ const Sign_up = () => {
 
   const signUpFunc = async () => {
     try{
-    const response = await fetch('http://127.0.0.1:8080/signup', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-
-    }).then(()=>navigate('/login'))
+      const {name,email,password}=payload
+      axios.post("http://127.0.0.1:8080/signup", payload).then((response) => {
+      console.log(response);
+    });
   } catch(error){
     console.log("Technical Issue Encountered")
   }

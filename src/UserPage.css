@@ -32,7 +32,7 @@
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 2px 0 #000, 1px 1px 0 #000;
     font-weight: bold;
 }
-.main-container-admin{
+.main-container-user{
     /* position:relative; */
     /* background-color: black ; */
     background: linear-gradient(136deg,#220e4d 2%,#6b068e 90.18%); 
@@ -65,10 +65,6 @@ color:white;
     margin:20px;
     border-radius: 8px;
     /* padding-top: 10px; */
-}
-select{
-    padding-left: 10px;
-    padding-right:10px;
 }
 .percentage{
     border-radius: 50%;
@@ -115,11 +111,6 @@ border-radius: 5px;
     margin:20px;
     border-radius: 9px;
     
-}
-.progressbar div{
-    display:flex;
-    align-items: center;
-    justify-content: center;
 }
 .fields{
     flex:0.3;

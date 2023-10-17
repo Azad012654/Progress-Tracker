@@ -1,14 +1,13 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './AdminPage.css'
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import Header from './Header';
 
 const AdminPage = () => {
 
     const [condition, setCondition] = useState(true)
     const [selectedCard, setSelectedCard] = useState(null);
+    const [user_data,setUserData]= useState([])
     
 
     const toggleCard = (index) => {
@@ -39,6 +38,17 @@ const AdminPage = () => {
         }
     ]
 
+    // useEffect(() => {
+    //     const getUserData = async () => {
+    //         await fetch(`http://127.0.0.1:8080/get_projects`)
+    //           .then((data) => {
+    //             setUserData(data);
+    //           })
+    //       }
+    //       getUserData()
+    //   }, []);
+
+
     return (
         <div className='main-container-admin'>
             <Header />
@@ -61,7 +71,7 @@ const AdminPage = () => {
                         </div>
                     </div>
                     <div className='progressbar'>
-                        <button className='view-progress-btn' onClick={() => toggleCard(index)}>View Progress</button>
+                        <div><button className='view-progress-btn' onClick={() => toggleCard(index)}>View Progress</button></div>
                         {
                             selectedCard === index && 
                             <div className='progress-info'>

@@ -45,7 +45,7 @@ const Login = () => {
                 </label>
               </div>
               <div class="button input-box">
-                <button type="button" className="submit_btn" onClick={logInFunc} value="Log In"/>
+                <button type="button" className="submit_btn" onClick={logInFunc} value="Log In">Log In</button>
               </div>
             </div>
 
