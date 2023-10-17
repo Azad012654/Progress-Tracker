@@ -20,7 +20,7 @@ const Login = () => {
       },
       body: JSON.stringify(payload)
 
-    }).then(()=>navigate('/admin'))
+    }).then(()=>navigate('/users_portal'))
     console.log("Signup Check"+response)
   } catch(error){
     console.log(error)

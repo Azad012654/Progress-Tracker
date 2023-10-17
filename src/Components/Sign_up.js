@@ -17,7 +17,7 @@ const Sign_up = () => {
 
   const signUpFunc = async () => {
     try{
-      const {name,email,password}=payload
+      const payload = {name,email,password}
       axios.post("http://127.0.0.1:8080/signup", payload).then((response) => {
       console.log(response);
     });
@@ -37,7 +37,7 @@ const Sign_up = () => {
     </div>
     <div className='form_div'>
     <form>
-    <h3>Sign Up</h3>
+    <div className='sign_or_admin_login'><h3>Sign Up</h3> <h3>/</h3> <Link to="/admin_login" style={{textDecoration:'none'}}><h4 id="adminlogin_Heading"><button className="admin_login_btn">Admin Login</button></h4></Link></div>
             <div class="input-boxes">  
               <div class="input-box">
                 <label for="name">Username:<br/>
